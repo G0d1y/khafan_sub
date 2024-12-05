@@ -73,7 +73,6 @@ async def handle_button2(client, message):
     links = user_state[session_key]["LINKS"]
     episode_names = user_state[session_key]["EP_List"]
     final = await collect_links(client, message, links, episode_names)
-    print(final)
     for task in final:
         lines = [line.strip() for line in task.split("\n") if line.strip()]
         if len(lines) == 3:
